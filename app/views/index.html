@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/app/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/app/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/app/css/Jane.css" />
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"
+    ></script>
+    <script>
+      function validateForm() {
+        let name = document.forms["myForm"]["name"].value;
+        if (name == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+        let email = document.forms["myForm"]["email"].value;
+        if (email == "") {
+          alert("Email must be filled out");
+          return false;
+        }
+        let phone = document.forms["myForm"]["phone"].value;
+        if (phone == "") {
+          alert("Phone must be filled out");
+          return false;
+        }
+      }
+      </script>
+  </head>
+
+  <body style="display: flex; flex-direction: column">
+    <div class="jane jane-block layout">
+      <div
+        style="--src:url(/app/images/front.png)"
+        class="jane-flex layout"
+      >
+        <div class="jane-flex1 layout">
+          <div class="jane-flex1-item">
+            <div
+              style="--src:url(/app/images/star.png)"
+              class="jane-icon layout"
+            ></div>
+          </div>
+          <div class="jane-flex1-spacer"></div>
+          <h1 class="jane-hero-title layout">Logo</h1>
+          <div class="jane-flex1-spacer1"></div>
+          <h5 class="jane-highlights layout"><a href="/contacts">Contact report</a></h5>
+          
+          <div class="jane-flex1-spacer2"></div>
+          <h5 class="jane-highlights layout"><a href="/contacts">About</a></h5>
+        </div>
+        <h1 class="jane-hero-title1 layout">About Jane’s Design Studio</h1>
+        <div class="jane-flex2 layout">
+          <div class="jane-flex2-item">
+            <div class="jane-flex3 layout">
+              <div
+                style="--src:url(/app/images/jane.png)"
+                class="jane-image2 layout"
+              ></div>
+              <h5 class="jane-highlights1-box layout">
+                <pre
+                  class="jane-highlights1"
+                ><span class="jane-highlights1-span0">JANE DOE
+</span><span class="jane-highlights1-span1">Autdr auartaoy eoehrtmecs hrusn arvce eaile soytlr tash ciloon satnire. Hoart thtet eemhne gorgn vynigt tigine pasioiie port</span></pre>
+              </h5>
+            </div>
+          </div>
+          <div class="jane-flex2-spacer"></div>
+          <div class="jane-flex2-item1">
+            <h5 class="jane-highlights2-box layout">
+              <pre class="jane-highlights2">
+Autdr auartaoy eoehrtmecs hrusn arvce eaile soytlr tash ciloon satnire. Hoart thtet eemhne gorgn vynigt tigine pasioiie port hhmt hitierd pnldered dhmieg arvsn. Baow cwl ylorn chg gored potjlav aupshiae totuen wovdd sutuhien hotn. Hrwy exciecteut atrder erdsuiag woe enruea for saom. Hdoat wisp eorsucor mn poihirr iaveoenpacs otse pdhiroad. Wnnmgt saaek mhdhn stoae pojrudid gose siany ccers coalute crbr. Vttr catrle stdst haay inhiirie dutetvcd deaeaiuos fase.
+
+Mabt bomllnt dmriilf ilrohs tonlecsnee cun fevtene poohreeh caorroee delegisenr peoduab. Goaloee rtnel sepite pmtruaitr dhtecduan bele taick wngirn. Hhrnl dhrln shrildeny cin slslmbot seen. Iiah pegtog prruey ingiituniof felseee wotw riwe hier. Ar clcte sxowek bgigt higiant rviad nhtx ser ler peey moterh ttsnt.</pre
+              >
+            </h5>
+          </div>
+          <div class="jane-flex2-spacer1"></div>
+
+          <form name="myForm" action="{{ @BASE.'/user/create' }}" onsubmit="return validateForm()" method="post" class="form-horizontal">
+            <div class="jane-flex2-item">
+              <div class="jane-flex4 layout">
+                <div class="jane-cover-block1 layout">
+                  <h5 class="jane-highlights layout1">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-user icon-black"></i> Name</span>
+                <input type="text" id="name" name="name" value="" class="input-xlarge" />
+            </div>
+          </h5>
+        </div>
+        <div class="jane-cover-block1 layout1">
+          <h5 class="jane-highlights layout2">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-envelope icon-black"></i> Email</span>
+                <input type="text" id="email" name="email" value="" class="input-xlarge" />
+            </div>
+          </h5>
+        </div>
+        <div class="jane-cover-block1 layout2">
+          <h5 class="jane-highlights layout3">
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-headphones icon-black"></i> Phone</span>
+                <input type="text" required="" pattern="^(?:0|\+?44)(?:\d\s?){9,10}$" value="" name="phone" id="phone" list="phones_pattern2_datalist" class="input-xlarge">
+            </div>
+          </h5>
+        </div>
+        <div class="jane-flex5 layout">
+          <div class="jane-flex5-item">
+            <div class="jane-box1 layout">
+            <input type="checkbox" id="confirmation" name="confirmation" value="1">
+            </div>
+          </div>
+          <div class="jane-flex5-spacer"></div>
+          <h5 class="jane-highlights layout4">
+            Confirm we can contact you
+          </h5>
+        </div>
+        <div class="jane-cover-block layout">
+          <h5 class="jane-highlights21 layout">
+            <div class="control-group">
+                    <input type="hidden" name="create" value="create" />
+                    <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Add User</button>
+                </div>
+            </div>
+        </div>
+        </form>
+      
+        </div>
+        </form>
+        </div>
+        <div
+          style="--src:url(/app/images/map.png)"
+          class="jane-image1 layout"
+        >
+          [um-iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.567531151864!2d-0.0918173849446657!3d51.502803218861374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760359bdd7498b%3A0x9cccc5ce4ac09462!2sKings%20College%20London%2C%2018-20%20Newcomen%20St%2C%20London%20SE1%201UL%2C%20UK!5e0!3m2!1sen!2sza!4v1645437184515!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"]
+        </div>
+        
+      </div>
+    </div>
+    <script type="text/javascript">
+      AOS.init();
+    </script>
+  </body>
+</html>

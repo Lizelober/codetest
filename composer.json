@@ -1,0 +1,12 @@
+{
+    "name": "lizel/fatfree",
+    "authors": [
+        {
+            "name": "Lizelober",
+            "email": "lizelober@gmail.com"
+        }
+    ],
+    "require": {
+        "bcosca/fatfree": "3.8.0"
+    }
+}

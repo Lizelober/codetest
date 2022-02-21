@@ -1,0 +1,23 @@
+<table width="600" cellpadding="5" class="table table-hover table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <repeat group="{{ @contacts }}" value="{{ @contacts }}">
+        <tr>
+            <td>{{ trim(@contacts.name) }}</td>
+            <td>{{ trim(@contacts.email) }}</td>
+            <td>{{ trim(@contacts.phone) }}</td>
+            <td><a href="{{ @BASE.'/user/delete/'. @contacts.id }}" class="btn btn-danger"><i class="icon-remove icon-white"></i>Delete</a></td>
+
+        </tr>
+    </repeat>
+    </tbody>
+
+</table>
